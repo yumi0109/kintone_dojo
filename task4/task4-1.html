@@ -56,8 +56,7 @@ header h2 {
   const inputArry = document.getElementsByClassName('chk');
   const secureOption = inputArry[0];
   const discOption = inputArry[1];
-  let totalOptionPrice = 0;
-  const basePrice = 3900;
+  let totalOptionPrice = 3900;
 
   secureOption.onclick = () => {
     if (secureOption.checked === true) {
@@ -65,7 +64,7 @@ header h2 {
     } else if (secureOption.checked === false) {
       totalOptionPrice -= Number(secureOption.value);
     }
-    document.getElementById('price').textContent = basePrice + Number(totalOptionPrice);
+    document.getElementById('price').textContent = Number(totalOptionPrice);
   };
 
   discOption.onclick = () => {
@@ -74,7 +73,7 @@ header h2 {
     } else if (discOption.checked === false) {
       totalOptionPrice -= Number(discOption.value);
     }
-    document.getElementById('price').textContent = basePrice + Number(totalOptionPrice);
+    document.getElementById('price').textContent = Number(totalOptionPrice);
   };
 </script>
 </body>
