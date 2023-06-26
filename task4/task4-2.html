@@ -78,22 +78,15 @@ header h2 {
   const discSelect = selectArry[1];
   
   document.getElementById('btn').onclick = () => {
-    let secureOptionPrice = 0;
-    let addedDiscPrice = 0;
-    const basePrice = 3900;
+    let basePrice = 3900;
 
     if (secureOption.checked === true) {
-      secureOptionPrice += Number(secureOption.value) * Number(secureSelect.value);
-    } else if (secureOption.checked === false) {
-      secureOptionPrice -= 0;
+      basePrice += Number(secureOption.value) * Number(secureSelect.value);
     }
-  
     if (discOption.checked === true) {
-      addedDiscPrice += Number(discOption.value) * Number(discSelect.value);
-    } else if (discOption.checked === false) {
-      addedDiscPrice -= 0;
+      basePrice += Number(discOption.value) * Number(discSelect.value);
     }
-    document.getElementById('price').textContent = basePrice + Number(secureOptionPrice) + Number(addedDiscPrice);
+    document.getElementById('price').textContent = basePrice;
   };
 </script>
 </body>
