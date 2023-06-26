@@ -1,0 +1,33 @@
+
+.product{
+    background-color: aquamarine;
+    color: #FFF;
+}
+
+.ir{
+    background-color: salmon;
+    color: #FFF;
+}
+
+.company{
+    background-color: aqua;
+    color: #FFF;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px
+}
+
+table {
+    border-collapse:  collapse; /* セルの線を重ねる */
+    width: 80%; 
+    text-align: center;
+}
+
+td {
+    border: 1px solid;
+    text-align: center;
+    padding: 1%;
+}
