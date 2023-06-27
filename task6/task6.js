@@ -1,31 +1,28 @@
 (() => {
   'use strict';
-
   kintone.events.on('app.record.create.show', (event) => {
-    const record = event.record;
-    console.log(record);
     const action5 = ['あくなき探求', '不屈の心体', '理想への共感', '心を動かす', '知識を増やす', '公明正大'];
+    const arryRow = []
 
-    action5.forEach((elem) => {
-      record.Table.value.push({
+    action5.forEach((val,elem) => {
+      arryRow[elem] = {
         value: {
-          Action5: {
+          'Action5': {
             type: 'DROP_DOWN',
-            value: elem
+            value: action5[elem]
           },
-          状況: {
+          '状況': {
             type: 'CHECK_BOX',
             value: ['未振り返り']
           },
-          課題: {
+          '課題': {
             type: 'MULTI_LINE_TEXT',
             value: ''
           }
         }
-      });
+      };
+      event.record.Table.value[elem] = arryRow[elem];
     });
-
-    record.Table.value.shift();
     return event;
   });
 })();
