@@ -9,7 +9,7 @@
 
 <body>
 <div class="box">
-    <table id="maintable"></table>
+  <table id="maintable"></table>
 </div>
 <script src="https://js.cybozu.com/axios/v0.27.2/axios.min.js"></script>
 <script>
@@ -21,7 +21,6 @@
       query: 'order by day desc limit 5'
     }
   }).then((resp) => {
-    console.log(resp);
     Object.keys(resp.data).forEach((key) => {
       const row = maintable.insertRow();
       const td1 = row.insertCell();
@@ -34,6 +33,17 @@
         resp.data[key].content.value = resp.data[key].content.value.substring(0, 29) + '...';
       }
       td3.innerHTML = `<a href = "${resp.data[key].url.value}" target="${resp.data[key].target.value}" >${resp.data[key].content.value} </a>`;
+      switch (resp.data[key].category.value) {
+        case '製品':
+          td2.id = 'product_color';
+          break;
+        case 'IR 情報':
+          td2.id = 'ir_color';
+          break;
+        case '企業情報':
+          td2.id = 'company_color';
+          break;
+      }; 
     });
   }).catch((err) => {
     console.log(`${err}`);

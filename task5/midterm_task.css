@@ -1,33 +1,41 @@
+#product_color{
+  background-color: #7FFFD4;
+}
 
-.product{
-    background-color: aquamarine;
-    color: #FFF;
+.product {
+  color: #fff;
+}
+
+#ir_color{
+  background-color: #FFA594;
 }
 
 .ir{
-    background-color: salmon;
-    color: #FFF;
+  color: #fff;
+}
+
+#company_color{
+  background-color: #AFDFE4;
 }
 
 .company{
-    background-color: aqua;
-    color: #FFF;
+  color: #fff;
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px
+  display: flex;
+  justify-content: center;
+  margin-top: 30px
 }
 
 table {
-    border-collapse:  collapse; /* セルの線を重ねる */
-    width: 80%; 
-    text-align: center;
+  border-collapse:  collapse;
+  width: 80%; 
+  text-align: center;
 }
 
 td {
-    border: 1px solid;
-    text-align: center;
-    padding: 1%;
+  border: 1px solid;
+  text-align: center;
+  padding: 1%;
 }
