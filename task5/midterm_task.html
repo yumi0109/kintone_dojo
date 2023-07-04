@@ -35,13 +35,13 @@
       td3.innerHTML = `<a href = "${resp.data[key].url.value}" target="${resp.data[key].target.value}" >${resp.data[key].content.value} </a>`;
       switch (resp.data[key].category.value) {
         case '製品':
-          td2.id = 'product_color';
+          td2.className = 'product_color';
           break;
         case 'IR 情報':
-          td2.id = 'ir_color';
+          td2.className = 'ir_color';
           break;
         case '企業情報':
-          td2.id = 'company_color';
+          td2.className = 'company_color';
           break;
       }; 
     });

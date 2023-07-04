@@ -1,4 +1,4 @@
-#product_color{
+.product_color{
   background-color: #7FFFD4;
 }
 
@@ -6,7 +6,7 @@
   color: #fff;
 }
 
-#ir_color{
+.ir_color{
   background-color: #FFA594;
 }
 
@@ -14,7 +14,7 @@
   color: #fff;
 }
 
-#company_color{
+.company_color{
   background-color: #AFDFE4;
 }
 
