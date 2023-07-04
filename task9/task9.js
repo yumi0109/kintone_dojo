@@ -2,9 +2,8 @@
   'use strict';
   kintone.events.on(['app.record.create.submit', 'app.record.edit.submit'], (event) => {
     const content = event.record.重複禁止項目.value;
-    const appId = kintone.app.getId();
     const params = {
-      app: appId,
+      app: kintone.app.getId(),
       fields: ['重複禁止項目'],
       query: `重複禁止項目 = "${content}"`,
     };
