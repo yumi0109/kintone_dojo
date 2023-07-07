@@ -10,7 +10,6 @@
     'app.record.edit.show'];
 
   kintone.events.on(field, (event) => {
-    event.record.重複禁止項目_文字列.disabled = true;
     const day = event.record.日付.value;
     const productName = event.record.サイボウズ製品.value;
     const controlNumber = event.record.管理番号.value ? event.record.管理番号.value : '';
@@ -33,6 +32,14 @@
     }
     let YYYYMMDD = dateFns.format(day, 'YYYYMMDD');
     event.record.重複禁止項目_文字列.value = `${YYYYMMDD}-${cybozuProducts}-${controlNumber}`;
+    return event;
+  });
+
+  kintone.events.on([
+    'app.record.create.show',
+    'app.record.edit.show'
+  ],(event) => {
+    event.record.重複禁止項目_文字列.disabled = true;
     return event;
   });
 })();
