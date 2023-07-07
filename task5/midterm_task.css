@@ -1,0 +1,41 @@
+.product_color{
+  background-color: #7FFFD4;
+}
+
+.product {
+  color: #fff;
+}
+
+.ir_color{
+  background-color: #FFA594;
+}
+
+.ir{
+  color: #fff;
+}
+
+.company_color{
+  background-color: #AFDFE4;
+}
+
+.company{
+  color: #fff;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px
+}
+
+table {
+  border-collapse:  collapse;
+  width: 80%; 
+  text-align: center;
+}
+
+td {
+  border: 1px solid;
+  text-align: center;
+  padding: 1%;
+}
